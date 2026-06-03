@@ -1,0 +1,1 @@
+export { ProjectDecor } from './ProjectDecor';

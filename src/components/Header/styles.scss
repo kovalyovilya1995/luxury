@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__lang-menu {
+    margin-left: 1rem;
+  }
+
+  &__nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__search_active {
+    width: 100%;
+  }
+
+  &_white {
+    .nav-link {
+      color: rgba(var(--white));
+    }
+  }
+}
+
+.nav-link {
+  font-family: var(--merriweather);
+  color: rgba(var(--grey-800));
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+
+  &.active {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+  }
+}

@@ -1,0 +1,1 @@
+export { ModalPhoto } from './ModalPhoto';

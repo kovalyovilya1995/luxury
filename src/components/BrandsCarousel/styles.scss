@@ -1,0 +1,76 @@
+.brands-carousel-item {
+  opacity: 0.5;
+  transition: opacity 500ms ease-in-out;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    height: 510px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+
+    @media (max-width: 2048px) {
+      height: 488px;
+    }
+
+    @media (max-width: 1792px) {
+      height: 424px;
+    }
+
+    @media (max-width: 1536px) {
+      height: 414px;
+    }
+
+    @media (max-width: 1344px) {
+      height: 360px;
+    }
+
+    @media (max-width: 1152px) {
+      height: 305px;
+    }
+
+    @media (max-width: 900px) {
+      height: 240px;
+    }
+  }
+
+  &__name {
+    font-family: var(--merriweather);
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(var(--grey-800));
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+      line-height: 1.57;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &_visited {
+    opacity: 1;
+  }
+}
+
+.brands-carousel-swiper {
+  position: relative;
+  margin-bottom: 7.5rem;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    margin-bottom: 4.375rem;
+  }
+
+  &:hover .swiper-nav-button {
+    opacity: 1;
+  }
+
+  &__spinner {
+    margin: 5rem auto;
+  }
+}

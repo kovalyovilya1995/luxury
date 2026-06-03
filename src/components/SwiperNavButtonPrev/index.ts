@@ -1,0 +1,1 @@
+export { SwiperNavButtonPrev } from './SwiperNavButtonPrev';

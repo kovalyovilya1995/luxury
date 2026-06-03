@@ -1,0 +1,37 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__product-list {
+    max-height: 304px;
+  }
+
+  &__brand-list {
+    max-height: 468px;
+  }
+
+  &__color-list {
+    max-height: 406px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 0.5rem 1rem !important;
+  }
+
+  &__switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    width: 17.1875rem;
+
+    &-label {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.625;
+      color: rgba(var(--grey-800));
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.modal-photo {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(var(--white));
+  z-index: 10;
+  overflow: hidden;
+  animation: 0.3s show ease;
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    width: calc(100vw - 40rem);
+  }
+
+  &__active-img {
+    width: 100% !important;
+    animation: 0.3s show2 ease;
+    cursor: url('./search-plus.svg'), auto !important;
+    display: none !important;
+
+    &_show {
+      display: inline-block !important;
+    }
+
+    &.zoomed {
+      cursor: url('./search-minus.svg'), auto !important;
+    }
+  }
+
+  &__scroll {
+    position: relative;
+    height: 0.25rem;
+    width: 100%;
+    background-color: rgba(var(--blue-grey-300));
+    margin: 0.6875rem 2rem 0.6875rem 0.5rem;
+
+    &-wrapper {
+      display: flex;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    &-label {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.625;
+      color: rgba(var(--grey-600));
+      white-space: nowrap;
+    }
+
+    &-item {
+      position: absolute;
+      height: 0.25rem;
+      transition: transform 500ms ease-in-out;
+      background-color: rgba(var(--grey-600));
+    }
+  }
+
+  &__arrow {
+    &-right {
+      position: absolute;
+      right: -5rem;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+
+      &_show {
+        cursor: pointer !important;
+        opacity: 1;
+      }
+    }
+
+    &-left {
+      position: absolute;
+      transform: rotateY(180deg);
+      left: -5rem;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+
+      &_show {
+        cursor: pointer !important;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#imageZoom {
+  object-fit: cover;
+  height: calc(100vh - 14rem);
+  transition: none !important;
+}

@@ -1,0 +1,20 @@
+.catalog-list {
+  width: 100%;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 17.1875rem);
+    justify-content: space-around;
+    width: 100%;
+    height: max-content;
+    grid-gap: 2.5rem;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+      grid-template-columns: repeat(auto-fill, 9.6875rem);
+      grid-gap: 1.5rem;
+      column-gap: 1.125rem;
+    }
+  }
+}

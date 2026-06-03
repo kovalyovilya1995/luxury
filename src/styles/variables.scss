@@ -1,0 +1,38 @@
+@function toRGB($color) {
+  @return red($color), green($color), blue($color);
+}
+
+:root {
+  --black: #{toRGB(#000000)};
+  --white: #{toRGB(#ffffff)};
+  --orange: #{toRGB(#f27502)};
+  --orange-200: #{toRGB(#f8a934)};
+  --orange-300: #{toRGB(#dd7311)};
+  --red: #{toRGB(#ef0000)};
+  --red-200: #{toRGB(#eb183e)};
+  --red-300: #{toRGB(#ee3838)};
+  --yellow: #{toRGB(#f0d948)};
+  --brown: #{toRGB(#bf8c5d)};
+  --blue: #{toRGB(#4094f7)};
+  --blue-200: #{toRGB(#3885f3)};
+  --blue-500: #{toRGB(#3366ff)};
+  --green: #{toRGB(#5cb16a)};
+  --violet: #{toRGB(#a96df4)};
+
+  --grey-100: #{toRGB(#f7f8fb)};
+  --grey-200: #{toRGB(#e4e7ec)};
+  --grey-300: #{toRGB(#dddfe4)};
+  --grey-400: #{toRGB(#bec0c6)};
+  --grey-500: #{toRGB(#bbbbbb)};
+  --grey-600: #{toRGB(#667085)};
+  --grey-650: #{toRGB(#434955)};
+  --grey-800: #{toRGB(#23252c)};
+  --grey-810: #{toRGB(#26282e)};
+  --grey-850: #{toRGB(#192038)};
+  --grey-900: #{toRGB(#101828)};
+
+  --blue-grey-300: #{toRGB(#e8e9ed)};
+
+  --merriweather: 'Merriweather';
+  --raleway: 'Raleway';
+}

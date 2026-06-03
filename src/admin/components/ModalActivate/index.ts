@@ -1,0 +1,1 @@
+export { ModalActivate } from './ModalActivate';

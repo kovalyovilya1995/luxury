@@ -1,0 +1,222 @@
+.projects-page {
+  background-color: rgba(var(--white));
+  box-sizing: border-box;
+
+  &__header {
+    padding: 3rem 6.875rem 0;
+
+    @media (max-width: 768px) {
+      padding: 1.75rem 1rem 1.25rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__content {
+    padding: 0 6.875rem 3rem;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+
+    &-main {
+      background-color: rgba(var(--grey-100));
+      border-radius: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 3rem;
+      margin-bottom: 6.25rem;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        margin: 1.5rem 1rem;
+        border-radius: 1.5rem;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 3rem;
+
+        @media (max-width: 768px) {
+          padding: 0 1rem;
+          gap: 0.125rem;
+        }
+      }
+
+      &-title {
+        font-family: var(--merriweather);
+        font-size: 2.5rem;
+        line-height: 1.25;
+        font-weight: 400;
+        color: rgba(var(--grey-800));
+
+        @media (max-width: 768px) {
+          font-size: 1.3125rem;
+          line-height: 1.42;
+          margin-top: 1.5rem;
+        }
+      }
+
+      &-description {
+        font-size: 1rem;
+        line-height: 1.625;
+        font-weight: 400;
+        color: rgba(var(--grey-600));
+        max-width: 346px;
+
+        @media (max-width: 768px) {
+          font-size: 0.875rem;
+          line-height: 1.857;
+        }
+      }
+
+      & > img {
+        object-fit: cover;
+        height: 29.875rem;
+        border-radius: 2rem;
+
+        @media (max-width: 1200px) {
+          height: 23rem;
+        }
+
+        @media (max-width: 1025px) {
+          height: 20rem;
+        }
+
+        @media (max-width: 768px) {
+          height: 12.4375rem;
+          border-radius: 1.5rem;
+          width: 100%;
+        }
+      }
+    }
+
+    &-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      margin-bottom: 6.25rem;
+
+      @media (max-width: 768px) {
+        gap: 1.5rem;
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: rgba(var(--grey-800));
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      padding: 0 1rem;
+      margin-top: 0.75rem;
+    }
+  }
+
+  &-button {
+    width: max-content;
+    display: flex !important;
+    align-items: center;
+
+    &__icon {
+      margin-left: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 0.75rem;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      width: max-content;
+      cursor: pointer !important;
+
+      @media (max-width: 768px) {
+        padding: 0 1rem;
+      }
+
+      &:hover {
+        .projects-page__item-title,
+        i {
+          color: rgba(var(--orange)) !important;
+        }
+      }
+    }
+
+    &-title {
+      font-family: var(--merriweather);
+      font-size: 1.5rem;
+      line-height: 1.3;
+      font-weight: 400;
+      color: rgba(var(--grey-800));
+      transition: color 0.3s ease-in-out;
+
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+        line-height: 1.6;
+      }
+    }
+
+    i {
+      cursor: pointer !important;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &-imgs {
+      box-sizing: border-box;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      width: 100%;
+      grid-gap: 2.5rem;
+
+      @media (max-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        overflow-x: auto;
+        margin-top: 0.875rem;
+        gap: 0.625rem;
+        padding: 0 1rem;
+      }
+    }
+
+    &-img {
+      height: 24.5625rem;
+      width: 100%;
+      border-radius: 1rem;
+      background-color: rgba(var(--blue-grey-300));
+      object-fit: cover;
+      cursor: pointer;
+
+      @media (max-width: 1200px) {
+        height: 18rem;
+      }
+
+      @media (max-width: 768px) {
+        height: 10.9375rem;
+        width: 9.375rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .swiper-slide {
+    height: auto !important;
+  }
+}

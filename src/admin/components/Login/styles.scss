@@ -1,0 +1,12 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../../public/bg-home-admin.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-form {
+    border-radius: 12px;
+  }
+}

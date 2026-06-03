@@ -1,0 +1,31 @@
+.tab {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5rem;
+  width: max-content;
+  background-color: rgba(var(--grey-100));
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--raleway);
+  color: rgba(var(--grey-800));
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.57;
+  }
+
+  &_active {
+    background-color: rgba(var(--grey-800));
+    color: rgba(var(--white));
+  }
+
+  &_capitalize {
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,1 @@
+export { CatalogCardPhotoMobile } from './CatalogCardPhotoMobile';

@@ -1,0 +1,118 @@
+.brands-page {
+  background-color: rgba(var(--white));
+
+  &__header {
+    padding: 3rem 6.875rem 0;
+
+    @media (max-width: 768px) {
+      padding: 1.75rem 1rem 1.25rem;
+      height: 2.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: rgba(var(--white));
+    }
+  }
+
+  &__content {
+    padding: 0 6.875rem 3rem;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: rgba(var(--grey-800));
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      padding: 0 1rem;
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.1875rem;
+    margin: 4.5rem 0 5rem;
+
+    @media (max-width: 768px) {
+      margin: 2rem 0 2.5rem;
+      padding: 0 1rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 2rem;
+      position: sticky;
+      top: 5.5rem;
+      background-color: rgba(var(--white));
+    }
+
+    &-item {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.625;
+      font-family: var(--merriweather);
+      color: rgba(var(--grey-800));
+
+      &:last-child {
+        margin-left: 0.3125rem;
+      }
+
+      &_disabled {
+        color: rgba(var(--grey-400));
+        cursor: auto;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 4.5rem;
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+    }
+
+    &-letter {
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.5;
+      font-family: var(--merriweather);
+      color: rgba(var(--grey-800));
+      margin-bottom: 1.5rem;
+    }
+
+    &-brands {
+      display: grid;
+      grid-template-columns: repeat(4, 17.1875rem);
+      grid-template-rows: repeat(auto-fit, 26px);
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+      column-gap: 2.5rem;
+      max-height: 476px;
+
+      @media (max-width: 768px) {
+        column-gap: 0;
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+        max-height: max-content;
+      }
+
+      &-item {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.625;
+        color: rgba(var(--grey-800));
+        text-transform: capitalize;
+      }
+    }
+  }
+}

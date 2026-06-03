@@ -1,0 +1,47 @@
+.modal-photo-mobile {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(var(--white));
+  z-index: 10;
+  overflow: hidden;
+  animation: 0.3s show ease;
+
+  &__img {
+    width: calc(100% - 2rem);
+    border-radius: 0.75rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  &__content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .swiper {
+      overflow: hidden !important;
+    }
+  }
+
+  &__scroll {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 1rem;
+    height: 0.25rem;
+    background-color: rgba(var(--grey-100));
+
+    &-item {
+      position: absolute;
+      height: 0.25rem;
+      transition: transform 500ms ease-in-out;
+      background-color: rgba(var(--grey-400));
+    }
+  }
+}

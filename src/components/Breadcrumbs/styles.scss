@@ -1,0 +1,39 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 3rem 0 1.5rem;
+
+  &-items {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &-icon {
+    position: relative;
+    top: 1px;
+  }
+
+  &__item {
+    font-family: var(--raleway);
+    font-size: 1rem;
+    line-height: 1.625;
+    color: rgba(var(--grey-400));
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:not(.breadcrumbs__item_active):hover {
+      color: rgba(var(--grey-600));
+    }
+
+    &_active {
+      color: rgba(var(--grey-800));
+      cursor: auto;
+    }
+  }
+}
+
+.brand-card-page .breadcrumbs__item {
+  text-transform: capitalize;
+}

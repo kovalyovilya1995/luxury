@@ -1,0 +1,130 @@
+.checkbox {
+  --main-color: var(--blue);
+  --border-color: var(--blue-grey-300);
+  --bg-color: var(--grey-100);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &-yellow {
+    --main-color: var(--yellow);
+    --border-color: var(--yellow);
+    --bg-color: var(--yellow);
+  }
+
+  &-brown {
+    --main-color: var(--brown);
+    --border-color: var(--brown);
+    --bg-color: var(--brown);
+  }
+
+  &-red {
+    --main-color: var(--red-300);
+    --border-color: var(--red-300);
+    --bg-color: var(--red-300);
+  }
+
+  &-orange {
+    --main-color: var(--orange-200);
+    --border-color: var(--orange-200);
+    --bg-color: var(--orange-200);
+  }
+
+  &-green {
+    --main-color: var(--green);
+    --border-color: var(--green);
+    --bg-color: var(--green);
+  }
+
+  &-blue {
+    --main-color: var(--blue-200);
+    --border-color: var(--blue-200);
+    --bg-color: var(--blue-200);
+  }
+
+  &-violet {
+    --main-color: var(--violet);
+    --border-color: var(--violet);
+    --bg-color: var(--violet);
+  }
+
+  &-grey {
+    --main-color: var(--grey-500);
+    --border-color: var(--grey-500);
+    --bg-color: var(--grey-500);
+  }
+
+  &-white {
+    --main-color: var(--white);
+    --bg-color: var(--white);
+
+    .checkbox__field:checked + .checkbox__label:before {
+      border-color: rgba(var(--blue-grey-300));
+      background-image: url('../../../../public/check-black.svg');
+    }
+  }
+
+  &-black {
+    --main-color: var(--black);
+    --border-color: var(--black);
+    --bg-color: var(--black);
+  }
+
+  &__field {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + .checkbox__label:before {
+      border-color: rgba(var(--main-color));
+      background-color: rgba(var(--main-color));
+      background-image: url('../../../../public/check.svg');
+      background-size: 11px 9px;
+    }
+
+    &:focus:not(:checked):not(.checkbox__field_custom-color)
+      + .checkbox__label:before {
+      border-color: rgba(var(--main-color));
+      background-color: rgba(var(--main-color), 0.1);
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    width: 100%;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      box-sizing: border-box;
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid rgba(var(--border-color));
+      background-color: rgba(var(--bg-color));
+      border-radius: 0.25rem;
+      margin-right: 0.5rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+}
+
+.filter__brand-list {
+  .checkbox__label {
+    text-transform: capitalize;
+  }
+}
+
+[data-filter='brand'] {
+  .dropdown_mobile {
+    .checkbox__label {
+      text-transform: capitalize;
+    }
+  }
+}

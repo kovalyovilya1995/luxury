@@ -1,0 +1,26 @@
+.catalog-card-photo-mobile {
+  &__img {
+    width: calc(100% - 2rem);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+
+  &__scroll {
+    position: relative;
+    margin: 1.5rem 1rem 0;
+    height: 0.25rem;
+    background-color: rgba(var(--grey-100));
+
+    &-item {
+      position: absolute;
+      height: 0.25rem;
+      transition: transform 500ms ease-in-out;
+      background-color: rgba(var(--grey-400));
+    }
+  }
+
+  .swiper-slide {
+    height: auto !important;
+  }
+}

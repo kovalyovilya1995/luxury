@@ -1,0 +1,135 @@
+.catalog-card-photo {
+  flex: 1;
+
+  &__wrapper-img {
+    position: relative;
+  }
+
+  &__img {
+    height: calc(calc(100vw - 13.75rem - 2.5rem) / 2);
+    width: 100%;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  &__carousel {
+    margin-top: 1.5rem;
+    position: relative;
+    max-width: calc(calc(100vw - 13.75rem - 2.5rem) / 2);
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      outline-offset: -3px;
+      box-sizing: border-box;
+
+      &_active {
+        outline: 3px solid rgba(var(--grey-400));
+      }
+    }
+
+    &-wrapper {
+      padding: 0.25rem 0;
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 3.5px;
+      bottom: 3.5px;
+      z-index: 2;
+      background-color: rgba(var(--grey-100));
+      width: 2.5rem;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      animation: 0.3s show ease;
+
+      &.-prev {
+        box-shadow: 4px 0 4px 0 rgba(34, 37, 45, 0.15);
+        left: -1px;
+      }
+
+      &.-next {
+        box-shadow: -4px 0 4px 0 rgba(34, 37, 45, 0.15);
+        right: -1px;
+      }
+
+      &-bg {
+        width: 4px;
+        background-color: transparent;
+        position: absolute;
+        top: 3.5px;
+        bottom: 3.5px;
+        animation: 0.3s show ease;
+
+        &.-prev {
+          left: -1px;
+        }
+
+        &.-next {
+          right: -1px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 0.25rem;
+          background-color: rgba(var(--white));
+        }
+      }
+    }
+  }
+
+  .swiper-slide {
+    // height: auto !important;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.mask {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(var(--white));
+  mask-size: 100%;
+
+  mask-position: 100%;
+  animation: show 1.5s ease;
+
+  &_right {
+    mask-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.24),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  &_left {
+    mask-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.24),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}

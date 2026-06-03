@@ -1,0 +1,1 @@
+export { LangMenu } from './LangMenu';

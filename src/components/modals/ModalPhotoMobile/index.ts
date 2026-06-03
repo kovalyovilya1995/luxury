@@ -1,0 +1,1 @@
+export { ModalPhotoMobile } from './ModalPhotoMobile';

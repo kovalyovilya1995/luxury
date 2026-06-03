@@ -1,0 +1,1 @@
+export { PageNews } from './News';
