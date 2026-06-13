@@ -68,9 +68,30 @@ export const Footer: FC<PropsType> = ({ isMobile }) => {
         <div className="footer__information">
           <div>©Luxury Living</div>
           <div className="footer__information-items">
-            <div className="pointer">{t('return-policy')}</div>
-            <div className="pointer">{t('personal-data')}</div>
-            <div className="pointer">Cookies</div>
+            <a
+              className="pointer"
+              href="/legal-details.pdf"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {t('return-policy')}
+            </a>
+            <a
+              className="pointer"
+              href="/personal-data.pdf"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {t('personal-data')}
+            </a>
+            <a
+              className="pointer"
+              href="/cookies.pdf"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Cookies
+            </a>
           </div>
         </div>
       </div>
